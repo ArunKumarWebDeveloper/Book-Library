@@ -1,4 +1,4 @@
-import { HeroGeometric } from './components/Herogemotric.jsx'
+
 import './App.css'
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-     <HeroGeometric />
+     Welcome to book reading
     </>
   )
 }

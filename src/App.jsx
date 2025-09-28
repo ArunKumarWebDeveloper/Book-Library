@@ -1,4 +1,4 @@
-
+import Home from './components/Home'
 import './App.css'
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-     Welcome to book reading
+    <Home />
     </>
   )
 }

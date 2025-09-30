@@ -35,7 +35,7 @@ background-color: rgb(20, 20, 19);
 }
 
 .user nav ul{
-    margin-top: 20px;
+    margin-top: 10px;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -45,15 +45,10 @@ background-color: rgb(20, 20, 19);
     height: 55px;
 }
 
-nav ul {
-    backdrop-filter: blur(10px);
-    box-shadow: 2px 10px 25px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-}
 
 nav ul li{
-    font-size: 1.5rem;
-    color: rgb(227, 98, 11);
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
 }
 
 .search-bar{

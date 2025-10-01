@@ -5,116 +5,145 @@
 }
 
 body{
-background-color: rgb(20, 20, 19);
+
      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.home{
-    display: flex;
-
-
-}
-.Search{
-    display: flex;
-    gap: 20%;
-    height: 100vh;
-    width: 50%;
-    background-image: url("./public/g (2).jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    
+.home {
+  position: relative; 
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
 }
 
-.Search img{
-    height: 40px;
-    width: 40px;
-    margin: 25px;
-    box-shadow: 2px 10px 25px rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-
+.main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
 }
 
-.user nav ul{
-    margin-top: 10px;
-    list-style: none;
-    display: flex;
+.overlay-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(0, 0, 0); 
+ 
+}
+
+.overlay-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
-    gap:30px;
-    width: 20vw;
-    height: 55px;
-}
-
-
-nav ul li{
-    font-size: 2rem;
-    color: rgb(255, 255, 255);
-}
-
-.search-bar{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    transform: translate(-115%,0%);
-}
-
-.search-bar input{
-    width: 500px;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    outline-color:orange ;
-    padding: 0 20px;
-    align-items: center;
-    font-size: 16px;
-    box-shadow: 2px 10px 25px rgba(0, 0, 0, 0.1);
 
 }
 
-.search-bar button{
-    width: 100px;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    background-color: orange;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 2px 10px 25px rgba(0, 0, 0, 0.1);
+.overlay-nav li:hover {
+color: #ffcc00;
+text-decoration: underline;
+ 
 }
 
-.search-bar h2{
+.overlay-nav li {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  
+
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #6FE6FC;
+  color: black;
+  font-weight: 700;
+}
+
+.logo img{
+    width:50px;
+    height: 50px;
+}
+
+
+.auth-buttons button:hover{
+    background-color: #ffcc00;
     color: rgb(0, 0, 0);
-    font-size: 2.2rem;
-}
-
-.search-bar footer{
-    display: flex;
-    gap: 50%;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 50vw;
-    height: 5vh;
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: rgb(255, 255, 255);
-}
-
-.search-bar footer a{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
+    transition: all 0.3ms ease-in-out;
+    transform: scale(1.05);
 }   
 
-.Content{
-    height: 100vh;
-    width: 50%;
-    background-image: url("./public/topic.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.4); /* transparent background */
+  border-radius: 12px;
+}
 
+.overlay-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
 
+.overlay-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* styled button */
+.cta-btn {
+  padding: 12px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ffcc00;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #ffcc00;
+  transform: scale(1.05);
+}
+
+/* Footer overlay */
+.overlay-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(25, 51, 130);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between; /* space between text and link */
+  align-items: center;
+}
+
+.overlay-footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.overlay-footer a:hover {
+  text-decoration: underline;
 }

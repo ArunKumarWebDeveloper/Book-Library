@@ -21,7 +21,7 @@ function Explore() {
           rel="noreferrer"
         >
           Explore Libraries in Bengaluru
-          &copy; credit to lbb.in 
+          &copy; Credit's to lbb.in 
         </a>
       </div>
     </div>

@@ -1,11 +1,11 @@
-function Explore() {
+function Explore({ onAuthClick }) {
   return (
     <div id="Explore" className="explore-container">
       <div className="image-row">
         <img src="img2 (2).jpg" alt="Explore" className="explore-img" />
         <img src="img2 (1).jpg" alt="Main" className="explore-img" />
       </div>
-      <div className="overlay">
+      <div className="overlay-explore"> {/* Changed class to avoid conflict */}
         <h2>Focus on Knowledge and Discovery</h2>
         <p>
           Step inside and let the journey of discovery begin, where history and
@@ -14,7 +14,7 @@ function Explore() {
           Turn a page, learn a new skill, and explore a world beyond your imagination.
           Your path to lifelong learning starts at your local library.
         </p>
-        <button className="cta-btn">Get Started</button>
+        <button className="cta-btn-explore" onClick={onAuthClick}>Get Started</button> {/* Updated and changed class */}
         <a
           href="https://lbb.in/bangalore/libraries-bangalore/"
           target="_blank"

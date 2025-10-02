@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -99,7 +99,7 @@ text-decoration: underline;
   text-align: center;
   color: white;
   padding: 40px;
-  background: rgba(0, 0, 0, 0.4); /* transparent background */
+  background: rgba(0, 0, 0, 0.4); 
   border-radius: 12px;
 }
 
@@ -113,7 +113,7 @@ text-decoration: underline;
   margin-bottom: 20px;
 }
 
-/* styled button */
+/* styled button 
 .cta-btn {
   padding: 12px 28px;
   font-size: 1rem;
@@ -131,7 +131,7 @@ text-decoration: underline;
   transform: scale(1.05);
 }
 
-/* Footer overlay */
+/* Footer overlay 
 
 .overlay-footer {
   width: auto;
@@ -140,7 +140,7 @@ text-decoration: underline;
   color: white;
   padding: 15px 30px;
   display: flex;
-  justify-content: space-between; /* space between text and link */
+  justify-content: space-between; 
   align-items: center;
 }
 
@@ -174,7 +174,7 @@ text-decoration: underline;
 .explore-img {
   width: 50%;
   height: 100%;
-  object-fit: cover; /* keeps proportions, fills space */
+  object-fit: cover; /* keeps proportions, fills space 
 }
 
 .overlay {
@@ -226,7 +226,7 @@ text-decoration: underline;
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
   padding: 10px 28px;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1); /* makes it button-like */
+  background: rgba(255, 255, 255, 0.1); /* makes it button-like 
 }
 
 .overlay a:hover{
@@ -235,3 +235,789 @@ text-decoration: underline;
   text-decoration: underline;
 }
 
+/* login page 
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  background: url("back (2).jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  height: 100vh;
+  margin: -20px 0 50px;
+}
+
+h1 {
+  font-weight: bold;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+
+span {
+  font-size: 12px;
+}
+
+a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+button {
+  border-radius: 20px;
+  border: 0.9px solid #fdcf00;
+  background-color: #fdcf00;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+form {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+
+input {
+  background-color: #ffffff;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius:10px ;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
+}
+
+@keyframes show {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.overlay {
+  background: #41aaff;
+  background: -webkit-linear-gradient(to right, rgb(1, 244, 250),rgb(2, 63, 71));
+  background: linear-gradient(to right, rgb(1, 244, 250), rgb(2, 63, 71));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+.social-container {
+  margin: 20px 0;
+}
+
+
+.social-container a {
+  border: 1px solid #eeeeee;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+}
+
+.social img{
+  height: 30px;
+  width:30px;
+  border-radius: 50%;
+
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer i {
+  color: red;
+}
+
+footer a {
+  color: #3c97bf;
+  text-decoration: none;
+} */
+
+/* GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    transition: all 0.3s ease-in-out;
+    scroll-behavior: smooth;
+}
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* HOME SECTION STYLES */
+.home {
+    position: relative; 
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* NAVIGATION STYLES */
+.overlay-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(0, 0, 0); 
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.overlay-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    transform: translate(30%, 0%);
+}
+
+.overlay-nav li a {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.overlay-nav li a:hover {
+    color: #00ddff;
+    text-decoration: underline;
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+    padding: 5px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #0b4fcc;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 1rem;
+    height: 48px;
+}
+
+.auth-buttons button:hover {
+    background-color: #0048ff;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease-in-out;
+    transform: scale(0.9);
+}   
+
+/* HOME OVERLAY CONTENT STYLES */
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.4); /* transparent background */
+    border-radius: 12px;
+}
+
+.overlay-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.overlay-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Home CTA button */
+.cta-btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: rgb(18, 62, 191);
+    color: #ffffff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: rgb(41, 81, 204);
+    transform: scale(1.05);
+}
+
+/* EXPLORE SECTION STYLES */
+#Explore {
+    height: 95vh;
+    width: 100%;
+}
+.explore-container {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    overflow: hidden;
+}
+
+.image-row {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.explore-img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* EXPLORE OVERLAY STYLES (renamed from .overlay) */
+.overlay-explore {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.69);
+    color: #ffffff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.overlay-explore h2 {
+    font-size: 2.7rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.overlay-explore p {
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Explore CTA button (renamed from .overlay button) */
+.cta-btn-explore {
+    padding: 12px 28px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: rgb(18, 62, 191);
+    color: #ffffff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Reusing the hover effect from cta-btn */
+.cta-btn-explore:hover {
+    background: rgb(34, 87, 244);
+    transform: scale(1.05);
+}
+
+.overlay-explore a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 10px 28px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1); 
+}
+
+.overlay-explore a:hover {
+    background: rgb(18, 62, 191);
+    transition: 0.3s all;
+    text-decoration: underline;
+}
+
+/* FOOTER STYLES */
+.overlay-footer {
+    width: auto;
+    background: rgb(25, 51, 130);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.overlay-footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.overlay-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* LOGIN/SIGN UP PAGE STYLES */
+
+/* Wrapper for the full authentication page */
+.auth-page-wrapper {
+    font-family: 'Arial', sans-serif;
+    background: url("back (2).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 90 50px;
+}
+
+/* Back Button Style */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000; 
+    border-radius: 8px;
+    border: 0.9px solid #099cb2;
+    background-color: #099cb2;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    transition: transform 80ms ease-in, background-color 0.3s;
+}
+
+.back-button:hover {
+  transform: scale(0.9);
+}
+
+.auth-heading { /* Renamed from h2 in App.jsx */
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff; /* Added for visibility against the background image */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Reusing generic element styles but prefixed with .auth-page-wrapper if needed for scoping */
+.auth-page-wrapper h1 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.auth-page-wrapper p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+.auth-page-wrapper span {
+    font-size: 12px;
+}
+
+.auth-page-wrapper a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+/* Form-specific button styles */
+.auth-page-wrapper button:not(.ghost, .back-button) {
+    border-radius: 20px;
+    border: 0.9px solid #fdcf00;
+    background-color: #fdcf00;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.auth-page-wrapper button:active {
+    transform: scale(0.95);
+}
+
+.auth-page-wrapper button:focus {
+    outline: none;
+}
+
+.auth-page-wrapper form {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+.auth-page-wrapper input {
+    background-color: #ffffff;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px ;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.auth-container { /* Renamed from .container to avoid conflict with generic containers */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.auth-container.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+}
+
+.sign-up-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.auth-container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+
+@keyframes show {
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.auth-container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+.overlay { /* This .overlay class is specifically for the auth page's colorful side panel */
+    background: #41aaff;
+    background: -webkit-linear-gradient(to right, rgb(1, 244, 250), rgb(2, 63, 71));
+    background: linear-gradient(to right, rgb(1, 244, 250), rgb(2, 63, 71));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #ffffff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.auth-container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+.auth-container.right-panel-active .overlay-left {
+    transform: translateX(0);
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.auth-container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+}
+
+.social-container {
+    margin: 20px 0;
+}
+
+.social-container a {
+    border: 1px solid #eeeeee;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.social img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.ghost{
+  background-color: #fdcf00;
+  border-radius: 20px;
+    border: none;
+    background-color: #fdcf00;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 8ms 
+ease-in;
+}

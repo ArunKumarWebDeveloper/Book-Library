@@ -1,5 +1,4 @@
-
-function Home() {
+function Home({ onAuthClick }) {
   return (
     <div className="home">
       <img className="main-img" src="exp (2).png" alt="Main" />
@@ -12,14 +11,14 @@ function Home() {
           <li><a href="#about">About</a></li>
         </ul>
         <div className="auth-buttons">
-          <button>Login / Sign Up</button>
+          <button onClick={onAuthClick}>Login / Sign Up</button> {/* Updated */}
         </div>
       </nav>
 
       <div className="overlay-content">
         <h2>Best Online <br />Learning Book Library</h2>
         <p>Sign up today and start exploring your next favorite read.</p>
-        <button className="cta-btn">Get Started</button>
+        <button className="cta-btn" onClick={onAuthClick}>Get Started</button> {/* Updated */}
       </div>
        
     </div>

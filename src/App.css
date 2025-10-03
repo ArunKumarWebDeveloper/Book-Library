@@ -582,16 +582,16 @@ body {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background-color: #01f4fa;
-    color: rgb(0, 0, 0);
+    background-color: #138587;
+    color: rgb(255, 255, 255);
     font-weight: 700;
     font-size: 1rem;
     height: 48px;
 }
 
 .auth-buttons button:hover {
-    background-color: #fdcf00;
-    color: rgb(1, 1, 1);
+    background-color: #f0c813;
+    color: rgb(255, 255, 255);
     transition: all 0.3s ease-in-out;
     transform: scale(0.9);
 }   
@@ -626,14 +626,14 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background: #01f4fa;
-    color: #000000;
+    background: #138587;
+    color: #ffffff;
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
 .cta-btn:hover {
-    background: rgb(253, 207, 0);
+    background: #f0c813;
     transform: scale(1.05);
 }
 
@@ -698,15 +698,15 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background: rgb(1, 244, 250);
-    color: #000000;
+    background: rgb(6, 166, 169);
+    color: #ffffff;
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
 /* Reusing the hover effect from cta-btn */
 .cta-btn-explore:hover {
-    background: rgb(253, 207, 0);
+    background: #f0c813;
     transform: scale(1.05);
 }
 
@@ -718,11 +718,11 @@ body {
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
     padding: 10px 28px;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1); 
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .overlay-explore a:hover {
-    background: rgb(253, 207, 0);
+    background: #f0c813;
     transition: 0.3s all;
     text-decoration: underline;
 }
@@ -730,8 +730,8 @@ body {
 /* FOOTER STYLES */
 .overlay-footer {
     width: auto;
-    background: rgb(1, 244, 250);
-    color: rgb(7, 7, 7);
+    background: rgb(4, 127, 130);
+    color: rgb(255, 255, 255);
     padding: 15px 30px;
     display: flex;
     justify-content: space-between; 
@@ -740,7 +740,7 @@ body {
 }
 
 .overlay-footer a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
 }

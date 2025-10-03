@@ -582,16 +582,16 @@ body {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background-color: #0b4fcc;
-    color: rgb(255, 255, 255);
+    background-color: #01f4fa;
+    color: rgb(0, 0, 0);
     font-weight: 700;
     font-size: 1rem;
     height: 48px;
 }
 
 .auth-buttons button:hover {
-    background-color: #0048ff;
-    color: rgb(255, 255, 255);
+    background-color: #fdcf00;
+    color: rgb(1, 1, 1);
     transition: all 0.3s ease-in-out;
     transform: scale(0.9);
 }   
@@ -626,14 +626,14 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background: rgb(18, 62, 191);
-    color: #ffffff;
+    background: #01f4fa;
+    color: #000000;
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
 .cta-btn:hover {
-    background: rgb(41, 81, 204);
+    background: rgb(253, 207, 0);
     transform: scale(1.05);
 }
 
@@ -698,21 +698,21 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background: rgb(18, 62, 191);
-    color: #ffffff;
+    background: rgb(1, 244, 250);
+    color: #000000;
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
 /* Reusing the hover effect from cta-btn */
 .cta-btn-explore:hover {
-    background: rgb(34, 87, 244);
+    background: rgb(253, 207, 0);
     transform: scale(1.05);
 }
 
 .overlay-explore a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: 600;
     backdrop-filter: blur(10px);
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
@@ -722,7 +722,7 @@ body {
 }
 
 .overlay-explore a:hover {
-    background: rgb(18, 62, 191);
+    background: rgb(253, 207, 0);
     transition: 0.3s all;
     text-decoration: underline;
 }
@@ -730,16 +730,17 @@ body {
 /* FOOTER STYLES */
 .overlay-footer {
     width: auto;
-    background: rgb(25, 51, 130);
-    color: white;
+    background: rgb(1, 244, 250);
+    color: rgb(7, 7, 7);
     padding: 15px 30px;
     display: flex;
     justify-content: space-between; 
     align-items: center;
+    font-weight: 600;
 }
 
 .overlay-footer a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-weight: 600;
 }

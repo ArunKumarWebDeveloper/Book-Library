@@ -1,7 +1,7 @@
 function Home({ onAuthClick }) {
   return (
     <div className="home">
-      <img className="main-img" src="exp (2).png" alt="Main" />
+      <img className="main-img" src="img2 (1).jpg" alt="Main" />
       <nav className="overlay-nav">
         <div className="logo">
           <img src="icon.png" alt="Icon" />

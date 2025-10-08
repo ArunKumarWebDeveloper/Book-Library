@@ -2,8 +2,7 @@ function Explore({ onAuthClick }) {
   return (
     <div id="Explore" className="explore-container">
       <div className="image-row">
-        <img src="img2 (2).jpg" alt="Explore" className="explore-img" />
-        <img src="img2 (1).jpg" alt="Main" className="explore-img" />
+        <img src="img2 (2).jpg" alt="Main" className="explore-img" />
       </div>
       <div className="overlay-explore"> {/* Changed class to avoid conflict */}
         <h2>Focus on Knowledge and Discovery</h2>

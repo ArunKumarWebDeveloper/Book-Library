@@ -20,9 +20,9 @@ const pool = new Pool({
 passport.use(
   new GoogleStrategy(
     {
-      clientID: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "/auth/google/callback",
+    clientID: '893780842545-gh4ucfsfdfqgejpqiviieunhjd3iiijk.apps.googleusercontent.com',
+    clientSecret: 'YOUR_CLIENT_SECRET',
+    callbackURL: 'http://localhost:5173/auth/google/callback', // must match Google Console
     },
     async (accessToken, refreshToken, profile, done) => {
       const email = profile.emails[0].value;

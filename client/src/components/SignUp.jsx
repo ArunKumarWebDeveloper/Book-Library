@@ -1,4 +1,3 @@
-// components/SignUp.jsx
 import React from "react";
 const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
 
@@ -28,7 +27,7 @@ function SignUpForm({ onAuthSuccess }) {
         return;
       }
 
-      // Try to auto-login after signup (server should accept /auth/login)
+      // ✅ Auto-login after signup and call onAuthSuccess to switch to Search.jsx
       const loginRes = await fetch(`${API_BASE}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -43,7 +42,6 @@ function SignUpForm({ onAuthSuccess }) {
         setMessage('Account created. Please login.');
       }
 
-      // clear fields
       setState({ name: "", email: "", password: "" });
     } catch (err) {
       console.error(err);
@@ -56,35 +54,14 @@ function SignUpForm({ onAuthSuccess }) {
       <form onSubmit={handleOnSubmit}>
         <h1>Create Account</h1>
         <div className="social-container">
-          <a href={`${API_BASE}/auth/google`} className="social">
-            <img src="/google.png" alt="Google" />
-          </a>
+         <a href={`${API_BASE}/auth/google`} className="social">
+  <img src="/google.png" alt="Google" />
+</a>
         </div>
         <span>or use your email for registration</span>
-        <input
-          type="text"
-          name="name"
-          value={state.name}
-          onChange={handleChange}
-          placeholder="Name"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          value={state.email}
-          onChange={handleChange}
-          placeholder="Email"
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          value={state.password}
-          onChange={handleChange}
-          placeholder="Password"
-          required
-        />
+        <input type="text" name="name" value={state.name} onChange={handleChange} placeholder="Name" required />
+        <input type="email" name="email" value={state.email} onChange={handleChange} placeholder="Email" required />
+        <input type="password" name="password" value={state.password} onChange={handleChange} placeholder="Password" required />
         <button type="submit">Sign Up</button>
         {message && <div style={{ color: 'green', marginTop: 8 }}>{message}</div>}
         {error && <div style={{ color: 'red', marginTop: 8 }}>{error}</div>}

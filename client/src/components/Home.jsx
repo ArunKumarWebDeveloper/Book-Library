@@ -16,8 +16,8 @@ function Home({ onAuthClick }) {
       </nav>
 
       <div className="overlay-content">
-        <h2>Best Online <br />Learning Book Library</h2>
-        <p>Sign up today and start exploring your next favorite read.</p>
+        <h2>Book Library<br />Best website to explore Books </h2>
+        <p>Sign up today and start exploring your next favorite Books.</p>
         <button className="cta-btn" onClick={onAuthClick}>Get Started</button> {/* Updated */}
       </div>
        

@@ -1,123 +1,107 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+// Helper component for Date and Time
+const DateAndTime = () => {
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentDateTime(new Date());
+    }, 1000); // Update every second
+
+    return () => clearInterval(timer); // Cleanup
+  }, []);
+
+  const dateOptions = { weekday: 'short', month: 'short', day: 'numeric' };
+  const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+
+  const date = currentDateTime.toLocaleDateString('en-US', dateOptions);
+  const time = currentDateTime.toLocaleTimeString('en-US', timeOptions);
+
+  return (
+    // Added 'datetime-card' wrapper for styling
+    <div className="datetime-card"> 
+      <span className="date-display">{date}</span>
+      <span className="time-display">{time}</span>
+    </div>
+  );
+};
 
 const Search = ({ onLogout }) => {
   const [showCard, setShowCard] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [books, setBooks] = useState([]);
-  const [selectedBook, setSelectedBook] = useState(null);
+  const [query, setQuery] = useState("");
 
-  const handleToggle = () => {
-    setShowCard(!showCard);
-  };
-
+  const handleToggle = () => setShowCard(!showCard);
   const handleLogout = () => {
     alert("Logged out successfully!");
     setShowCard(false);
     onLogout && onLogout();
   };
-
-  // Fetch books from Google Books API
-  const handleSearch = async () => {
-    if (!searchQuery) return;
-    try {
-      const res = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(
-          searchQuery
-        )}`
-      );
-      const data = await res.json();
-      setBooks(data.items || []);
-    } catch (err) {
-      console.error("Error fetching books:", err);
-    }
-  };
-
-  // Open modal with book details
-  const handleReadNow = (book) => {
-    setSelectedBook(book);
-  };
-
-  // Close modal
-  const closeModal = () => setSelectedBook(null);
+  const handleChange = (e) => setQuery(e.target.value);
+  const clearSearch = () => setQuery("");
 
   return (
     <div className="search-page">
       <div className="search-container">
+        
+        {/* Updated Header with Date and Time */}
         <header className="header">
-          <h1>Book Library</h1>
+          <div className="header-left">
+            <h1>Book Library</h1>
+          </div>
 
-          <div className="user-wrapper">
-            <button className="user-btn" onClick={handleToggle}>
-              <img src="/user.png" alt="User" />
-            </button>
+          <div className="header-right">
+            <DateAndTime /> {/* Date and Time card */}
 
-            {showCard && (
-              <div className="user-card">
-                <p className="username">Arun Kumar</p>
-                <button className="logout-btn" onClick={handleLogout}>
-                  Logout
-                </button>
-              </div>
-            )}
+            <div className="user-wrapper">
+              <button className="user-btn" onClick={handleToggle}>
+                {/* Assuming you have a user icon/image here */}
+                <img src="/user.png" alt="User" /> 
+              </button>
+
+              {showCard && (
+                <div className="user-card">
+                  <p className="username">Book Library</p>
+                  <button className="logout-btn" onClick={handleLogout}>
+                    Logout
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </header>
 
-        {/* Search bar */}
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Search by book title..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            onKeyPress={(e) => e.key === "Enter" && handleSearch()}
-          />
-          <button className="search-button" onClick={handleSearch}>
-            
-          </button>
-        </div>
-
-        {/* Search results */}
-        <div className="search-results">
-          {books.map((book) => {
-            const info = book.volumeInfo;
-            return (
-              <div key={book.id} className="book-card">
-                <img
-                  src={info.imageLinks?.thumbnail}
-                  alt={info.title}
-                  className="book-thumb"
-                />
-                <h3>{info.title}</h3>
-                <p>{info.authors?.join(", ")}</p>
-                <button onClick={() => handleReadNow(info)}>Read Now</button>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Modal for reading book */}
-        {selectedBook && (
-          <div className="modal-overlay" onClick={closeModal}>
-            <div
-              className="modal-content"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <h2>{selectedBook.title}</h2>
-              <p><strong>Authors:</strong> {selectedBook.authors?.join(", ")}</p>
-              <p>{selectedBook.description || "No description available."}</p>
-              {selectedBook.previewLink && (
-                <a
-                  href={selectedBook.previewLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Read Full Book
-                </a>
+        <div className="search-bar-content">
+          <div className="search-bar">
+            <div className="search-input-wrapper">
+              <input
+                type="text"
+                value={query}
+                onChange={handleChange}
+                placeholder="Search by book title..."
+                className="search-input"
+              />
+              {query && (
+                <span className="clear-icon" onClick={clearSearch}>
+                  &times;
+                </span>
               )}
-              <button onClick={closeModal}>Close</button>
+              <button className="search-button"></button> 
             </div>
           </div>
-        )}
+
+          <div className="search-results">
+              {/* Search results content will go here */}
+          </div>
+        </div>
+        
+        {/* Footer Section - now positioned correctly at the bottom */}
+        <footer className="search-footer">
+            <p className="footer-text">
+                Designed by <strong>Arun Kumar R</strong> | Powered by <strong>Google API</strong>
+            </p>
+        </footer>
+
       </div>
     </div>
   );

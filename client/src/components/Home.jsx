@@ -8,7 +8,7 @@ function Home({ onAuthClick }) {
         </div>
         <ul>
           <li className="li1" ><a href="#Explore">Explore</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about">Contact</a></li>
         </ul>
         <div className="auth-buttons">
           <button onClick={onAuthClick}>Login / Sign Up</button> {/* Updated */}

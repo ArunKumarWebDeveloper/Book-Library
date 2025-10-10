@@ -967,9 +967,9 @@ body {
     top: 20px;
     left: 20px;
     z-index: 1000; 
-    border-radius: 8px;
-    border: 0.9px solid #099cb2;
-    background-color: #099cb2;
+    border-radius: 40px;
+    border: 0.9px solid rgba(161, 234, 253, 0.95);
+    background-color: rgb(0, 204, 255);
     color: #ffffff;
     font-size: 16px;
     font-weight: 600;
@@ -988,7 +988,7 @@ body {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #ffffff; /* Added for visibility against the background image */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Reusing generic element styles but prefixed with .auth-page-wrapper if needed for scoping */
@@ -1019,10 +1019,11 @@ body {
 /* Form-specific button styles */
 .auth-page-wrapper button:not(.ghost, .back-button) {
     border-radius: 20px;
-    border: 0.9px solid #fdcf00;
-    background-color: #fdcf00;
-    color: #000000;
+    border: 0.9px rgba(161, 234, 253, 0.95);
+    background-color: rgb(0, 204, 255);
+    color: #ffffff;
     font-size: 12px;
+    box-shadow:0 0 10px rgba(161, 234, 253, 0.95) ;
     font-weight: 600;
     padding: 12px 45px;
     letter-spacing: 1px;
@@ -1132,8 +1133,8 @@ body {
 
 .overlay { /* This .overlay class is specifically for the auth page's colorful side panel */
     background: #41aaff;
-    background: -webkit-linear-gradient(to right, rgb(1, 244, 250), rgb(2, 63, 71));
-    background: linear-gradient(to right, rgb(1, 244, 250), rgb(2, 63, 71));
+    background: -webkit-linear-gradient(to right, rgb(0, 204, 255), rgba(161, 234, 253, 0.95));
+    background: linear-gradient(to right, rgba(161, 234, 253, 0.95),  rgb(0, 204, 255));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
@@ -1204,11 +1205,12 @@ body {
 }
 
 .ghost{
-  background-color: #fdcf00;
   border-radius: 20px;
     border: none;
-    background-color: #fdcf00;
-    color: #000000;
+    background-color:  rgb(0, 106, 255);
+    box-shadow: 0 0 10px rgba(161, 234, 253, 0.95);
+
+    color: #ffffff;
     font-size: 12px;
     font-weight: 600;
     padding: 12px 45px;
@@ -1258,10 +1260,8 @@ ease-in;
 }
 
 /* User Button + Card */
-.user-wrapper {
- position: relative;
 
-}
+
 
 .user-btn {
   background: none;
@@ -1334,9 +1334,7 @@ ease-in;
 /* ========================================= */
 
 .search-page {
-  /* This is the background of the entire screen */
-  background-color: #e0f7fa; 
-  min-height: 100vh;
+  height: 100vh;
   padding: 30px;
 }
 
@@ -1349,7 +1347,7 @@ ease-in;
   width: 100%;
   margin: 0 auto;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(194, 249, 247, 0.95);
   padding: 20px 40px; 
 }
 
@@ -1367,7 +1365,7 @@ ease-in;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid #f0f0f0; 
+  border-bottom: 1px solid #d0d0d0; 
   margin-bottom: 20px;
 }
 
@@ -1385,14 +1383,15 @@ ease-in;
 
 /* Card Style for Date and Time */
 .datetime-card {
-  background-color: #f8f8f8; /* Light background for the card */
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  background-color: #ffffff; /* Light background for the card */
+  border: 1px solid #cacaca;
+  border-radius: 10px;
   padding: 8px 12px;
   text-align: right;
   font-size: 13px;
   line-height: 1.2;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  margin-right: 50px;
 }
 
 .date-display {
@@ -1411,7 +1410,8 @@ ease-in;
 .user-btn img {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 0%;
+     box-shadow: 0 0 10px rgba(161, 234, 253, 0.95);
     cursor: pointer;
 }
 
@@ -1436,7 +1436,7 @@ ease-in;
 .search-input {
   flex-grow: 1;
   padding: 12px 50px 12px 15px; 
-  border: 2px solid #a0c4ff;
+  border: 1px solid rgba(161, 234, 253, 0.95);
   border-radius: 25px;
   font-size: 16px;
   outline: none;

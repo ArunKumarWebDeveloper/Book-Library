@@ -46,7 +46,9 @@ export default function App() {
   if (view === "auth") {
     return (
       <div className="auth-page-wrapper">
-        <button onClick={switchToMain} className="back-button">Back</button>
+        <button onClick={switchToMain} className="back-button">
+          <span className="back-icon">&#x25C0; Back</span> 
+        </button>
         <h2 className="auth-heading">LOGIN / SIGN UP </h2>
         <div className={containerClass} id="container">
           <SignUpForm onAuthSuccess={switchToSearch} />
